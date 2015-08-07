@@ -1,7 +1,7 @@
 ![vim-color-splatoon](splatoon.png)
 ===================================
 
-This is a Vim color scheme heavily inspired by Splatoon.
+This is a Vim color scheme heavily inspired by [Splatoon](http://www.nintendo.co.jp/wiiu/agmj/).
 
 Colors are selected randomly on `:colorscheme`!
 
