@@ -3,7 +3,7 @@
 
 This is a Vim color scheme heavily inspired by [Splatoon](http://www.nintendo.co.jp/wiiu/agmj/).
 
-Colors are selected randomly on `:colorscheme`!
+Colors are selected randomly on `:colorscheme`! This color scheme is now only for gVim.
 
 ## Usage
 
