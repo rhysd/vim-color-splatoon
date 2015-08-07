@@ -3,6 +3,8 @@
 
 This is a Vim color scheme heavily inspired by Splatoon.
 
+Colors are selected randomly on `:colorscheme`!
+
 ## Usage
 
 Simply use `:colorscheme`
@@ -17,13 +19,19 @@ colorscheme splatoon
 
 Regular Splatoon color scheme.  Uses preset Splatoon colors.
 
+![regular](https://raw.githubusercontent.com/rhysd/ss/master/vim-color-splatoon/color-splatoon.gif)
+
 ### `splatoon-1on1`
 
 Only 2 colors are selected randomly from like battle in Splatoon.
 
+![1-on-1](https://raw.githubusercontent.com/rhysd/ss/master/vim-color-splatoon/color-splatoon-1on1.gif)
+
 ### `splatoon-random`
 
 Generate random Splatoon-like colors.
+
+![totally random](https://raw.githubusercontent.com/rhysd/ss/master/vim-color-splatoon/color-splatoon-random.gif)
 
 ## License
 
