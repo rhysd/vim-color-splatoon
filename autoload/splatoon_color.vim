@@ -53,7 +53,7 @@ if !exists('s:rng')
     let s:rng = s:Random.new('Xor128')
 endif
 
-
+" random generator {{{
 function! splatoon_color#get_random_generator() abort
     let gen = {"base" : s:rng.shuffle([0, 1, 2])}
 
@@ -94,6 +94,7 @@ function! splatoon_color#get_random_generator() abort
 
     return gen
 endfunction
+" }}}
 
 " regular generator {{{
 function! splatoon_color#get_regular_generator() abort
@@ -227,8 +228,8 @@ function! splatoon_color#colorize(generator_name) abort
     call s:hi("CursorColumn"              , g.gen_bg(), "none")
     call s:hi("CursorLine"                , g.gen_bg(), "none")
     call s:hi("CursorLineNr"              , g.gen_pair())
-    call s:hi("PMenu"                     , g.gen_pair(), "none")
-    call s:hi("PMenuSel"                  , g.gen_pair())
+    call s:hi("PMenu"                     , g.gen_bg(), "none")
+    call s:hi("PMenuSel"                  , g.gen_fg())
     call s:hi("TabLine"                   , g.gen_pair(), "none")
     call s:hi("TabLineFill"               , g.gen_pair(), "none")
     call s:hi("TabLineSel"                , g.gen_pair(), "none")
