@@ -53,6 +53,48 @@ if !exists('s:rng')
     let s:rng = s:Random.new('Xor128')
 endif
 
+
+function! splatoon_color#get_random_generator() abort
+    let gen = {"base" : s:rng.shuffle([0, 1, 2])}
+
+    function! gen.generate_one() dict abort
+
+        let colors = [0, 0, 0]
+        let base = self.base[0]
+
+        let i = base
+        let colors[i] = s:rng.sample([255, 200, 180, 150])
+
+        let n = s:rng.range(2)
+        let i = (base + n + 1) % 3
+        let colors[i] = s:rng.sample([255, 200, 180, 150, 100, 50, 40])
+
+        let i = (base + 2 - n) % 3
+        let colors[i] = s:rng.sample([60, 40, 30, 0])
+
+        unlet self.base[0]
+        if len(self.base) ==# 0
+            let self.base = s:rng.shuffle([0, 1, 2])
+        endif
+
+        return '#' . join(map(colors, 'printf("%x", v:val)'), '')
+    endfunction
+
+    function! gen.gen_fg() dict abort
+        return ["guifg=" . self.generate_one(), ""]
+    endfunction
+
+    function! gen.gen_bg() dict abort
+        return ["", "guibg=" . self.generate_one()]
+    endfunction
+
+    function! gen.gen_pair() dict abort
+        return ["guifg=" . self.generate_one(), "guibg=" . self.generate_one()]
+    endfunction
+
+    return gen
+endfunction
+
 " regular generator {{{
 function! splatoon_color#get_regular_generator() abort
     let gen = {

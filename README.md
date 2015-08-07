@@ -15,15 +15,15 @@ colorscheme splatoon
 
 ### `splatoon` color scheme
 
-Regular Splatoon color scheme
+Regular Splatoon color scheme.  Uses preset Splatoon colors.
 
 ### `splatoon-1on1`
 
-Only 2 colors are selected randomly like battle in Splatoon.
+Only 2 colors are selected randomly from like battle in Splatoon.
 
 ### `splatoon-random`
 
-Coming soon!
+Generate random Splatoon-like colors.
 
 ## License
 
