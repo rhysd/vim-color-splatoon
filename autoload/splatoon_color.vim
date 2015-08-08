@@ -77,7 +77,7 @@ function! splatoon_color#get_random_generator() abort
             let self.base = s:rng.shuffle([0, 1, 2])
         endif
 
-        return '#' . join(map(colors, 'printf("%x", v:val)'), '')
+        return '#' . join(map(colors, 'printf("%.2x", v:val)'), '')
     endfunction
 
     function! gen.gen_fg() dict abort
