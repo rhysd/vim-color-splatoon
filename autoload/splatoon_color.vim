@@ -189,6 +189,10 @@ function! s:hi(group, colors, ...) abort
 endfunction
 
 function! splatoon_color#colorize(generator_name) abort
+    if !has('gui_running')
+        echohl ErrorMsg | echomsg "'splatoon' colorscheme is only for gVim!" | echohl None
+    endif
+
     let g = splatoon_color#get_{a:generator_name}_generator()
 
     call s:hi("Bold"                      , ["", ""], "bold")
